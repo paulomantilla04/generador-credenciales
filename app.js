@@ -79,7 +79,7 @@ let opt = {
   margin: 0,
   filename: 'tiraMaterias.pdf',
   image: { type: 'svg', quality: 0.98},
-  html2canvas: { scale: 1},
+  html2canvas: { scale: 4},
   jsPDF: { format: 'letter', orientation: 'portrait' }
 }
 
