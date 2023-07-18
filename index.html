@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generador de tira de materias </title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+
+
+    <div class="credencial" id="credencial">
+      <div class="credencial-A">
+          
+          <div class="datos-escolares">
+              
+              <p class="nombreCred" id="nombreCred">NOMBRE</p>
+              <p class="numCuentaCred" id="numCred">000000</p>
+              <p class="promedioCred" id="promedioCred">0.00</p>
+              <p class="reprobadasCred" id="reprobadasCred">0</p>   
+              <p class="fechaCred" id="fechaCred">DD/MM/AAAA</p>
+              <p class="claveCred" id="claveCred">CLAVE EJEMPLO</p>
+          </div>
+          
+          <img src="assets/tira-ingles.svg" alt="" id="tiraMaterias">
+      </div>
+
+    </div>
+
+
+    <div class="overlay" id="myNav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeTira()">&times;</a>
+      <div class="overlay-content">
+          <img src="img/comprob.jpg" alt="" class="overlay-img">
+      </div>
+    </div>
+
+
+    <div class="container" id="containerForm">
+
+
+      <span class="big-circle"></span>
+      <div class="form">
+        <div class="contact-info">
+          <h3 class="title">Genera tu tira de materias</h3>
+          <p class="text">
+            Con el propósito de generar tu tira de materias en tamaño credencial para que
+            su portabilidad sea más fácil.
+          </p>
+
+          <p class="text">(Solo válido para alumnos de Software 301/302)</p>
+          <h3 class="text-small">No sabes los datos de tu tira de materias?</h3>
+
+          <button class="btn-check-h" onclick="openTira()">Checalos aquí</button>
+
+          <div class="info">
+
+          </div>
+
+
+        </div>
+
+        <div class="contact-form">
+
+          <form action="index.html" autocomplete="off" id="myForm">
+            <h3 class="title">Llena los datos</h3>
+            <div class="input-container">
+              <input type="text" name="nombre" class="input" id="fullName"/>
+              <label for="">Nombre completo</label>
+              <span>Nombre completo</span>
+            </div>
+            <div class="input-container">
+              <input type="text" name="ncuenta" class="input" id="nCuenta"/>
+              <label for="">Número de cuenta</label>
+              <span>Número de cuenta</span>
+            </div>
+            <div class="input-container">
+              <input type="text" name="promedio" class="input" id="promedio"/>
+              <label for="">Promedio</label>
+              <span>Promedio</span>
+            </div>
+            <div class="input-container">
+              <input type="text" name="reprobadas" class="input" id="reprobadas"/>
+              <label for="">No. Reprobadas</label>
+              <span>No. reprobadas</span>
+            </div>
+            <div class="input-container">
+              <input type="text" name="clave" class="input" id="claveTira"/>
+              <label for="">Clave de tira</label>
+              <span>Clave de tira</span>
+            </div>
+
+            <div class="qt-text">
+              <p class="question-text">¿Llevas inglés?</p>
+            </div>
+
+            <div class="checkbox-wrapper-12">
+          
+              <div class="cbx">
+                <input id="cbx-12" type="checkbox">
+                <label for="cbx-12"></label>
+                <svg width="15" height="14" viewBox="0 0 15 14" fill="none">
+                  <path d="M2 8.36364L6.23077 12L13 2"></path>
+                </svg>
+              </div>
+              
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <defs>
+                  <filter id="goo-12">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"></feGaussianBlur>
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -7" result="goo-12"></feColorMatrix>
+                    <feBlend in="SourceGraphic" in2="goo-12"></feBlend>
+                  </filter>
+                </defs>
+              </svg>
+            </div>  
+
+            <button class="btn-check-h" type="submit">Generar tira de materias</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+    
+    <!-- ===== HTML2PDF ======-->
+    <script src="assets/html2pdf.bundle.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+  </body>
+</html>
